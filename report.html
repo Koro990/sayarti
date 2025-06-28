@@ -1,64 +1,93 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>إبلاغ عن سيارة مسروقة</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
+      margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: #f0f2f5;
-      padding: 2rem;
+      background: linear-gradient(to right, #00203FFF, #ADEFD1FF);
+      color: #fff;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    h1 {
-      color: #005c99;
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
     }
+
     form {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 600px;
+      color: #00203FFF;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
     }
+
     label {
       display: block;
-      margin-top: 1rem;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      font-weight: bold;
     }
+
     input, textarea {
       width: 100%;
-      padding: 0.7rem;
-      margin-top: 0.3rem;
-      border: 1px solid #ccc;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
       border-radius: 8px;
+      font-size: 1rem;
+      background-color: #f0f0f0;
     }
+
     button {
-      margin-top: 1rem;
-      background: #005c99;
-      color: white;
-      padding: 0.7rem 1.5rem;
+      background-color: #00203FFF;
+      color: #fff;
+      padding: 12px 25px;
+      font-size: 1.1rem;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ADEFD1FF;
+      color: #00203FFF;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+      label, input, textarea, button {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
+  <h2>🚨 بلاغ عن سيارة مسروقة</h2>
+  <form>
+    <label for="chassis">رقم الشاسي</label>
+    <input type="text" id="chassis" name="chassis" placeholder="مثال: ABC123456789" required>
 
-<h1>تقديم بلاغ عن سيارة مسروقة</h1>
-<form>
-  <label>رقم الشاسيه</label>
-  <input type="text" placeholder="أدخل رقم الهيكل">
+    <label for="plate">رقم اللوحة (اختياري)</label>
+    <input type="text" id="plate" name="plate" placeholder="مثال: 1234 / ولاية الخرطوم">
 
-  <label>رقم اللوحة (اختياري)</label>
-  <input type="text">
+    <label for="details">تفاصيل إضافية</label>
+    <textarea id="details" name="details" rows="4" placeholder="مثل لون السيارة، موديل، تاريخ السرقة..." required></textarea>
 
-  <label>وصف السيارة</label>
-  <textarea rows="4" placeholder="مثلاً: تويوتا هايلوكس 2020، بيضاء..."></textarea>
-
-  <label>صورة (رابط صورة إن وجدت)</label>
-  <input type="url" placeholder="https://example.com/car.jpg">
-
-  <button type="submit">إرسال البلاغ</button>
-</form>
-
+    <button type="submit">إرسال البلاغ</button>
+  </form>
 </body>
 </html>
