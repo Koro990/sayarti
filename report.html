@@ -2,16 +2,63 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>بلاغ عن سرقة</title>
+  <title>إبلاغ عن سيارة مسروقة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #f0f2f5;
+      padding: 2rem;
+    }
+    h1 {
+      color: #005c99;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-top: 0.3rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+    button {
+      margin-top: 1rem;
+      background: #005c99;
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h2>🚨 بلاغ عن سيارة مسروقة</h2>
-  <form>
-    <label>رقم الشاسيه:</label><br><input type="text"><br>
-    <label>رقم اللوحة (إن وجد):</label><br><input type="text"><br>
-    <label>وصف السيارة:</label><br><textarea></textarea><br>
-    <label>صورة (اختياري):</label><br><input type="file"><br><br>
-    <button type="submit">إرسال البلاغ</button>
-  </form>
+
+<h1>تقديم بلاغ عن سيارة مسروقة</h1>
+<form>
+  <label>رقم الشاسيه</label>
+  <input type="text" placeholder="أدخل رقم الهيكل">
+
+  <label>رقم اللوحة (اختياري)</label>
+  <input type="text">
+
+  <label>وصف السيارة</label>
+  <textarea rows="4" placeholder="مثلاً: تويوتا هايلوكس 2020، بيضاء..."></textarea>
+
+  <label>صورة (رابط صورة إن وجدت)</label>
+  <input type="url" placeholder="https://example.com/car.jpg">
+
+  <button type="submit">إرسال البلاغ</button>
+</form>
+
 </body>
 </html>
