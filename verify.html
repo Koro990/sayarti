@@ -2,63 +2,127 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تحقق من رقم الشاسيه</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>التحقق من السيارة</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(to top left, #f1f8e9, #dcedc8);
-      color: #1b5e20;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #003f5c, #2f4b7c);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
     }
+
     header {
-      background-color: #2e7d32;
-      color: white;
+      width: 100%;
       padding: 20px;
+      background-color: #002f4b;
       text-align: center;
-      font-size: 24px;
-      font-weight: bold;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #ffffff;
+    }
+
     .container {
-      max-width: 600px;
-      margin: 40px auto;
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
+      background-color: #ffffff;
+      color: #333333;
+      margin-top: 40px;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      width: 90%;
+      max-width: 500px;
     }
+
+    .container h2 {
+      text-align: center;
+      color: #003f5c;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
     input {
       width: 100%;
-      padding: 15px;
-      font-size: 18px;
-      border-radius: 10px;
+      padding: 12px;
+      font-size: 1rem;
       border: 1px solid #ccc;
-      margin-top: 20px;
-      box-sizing: border-box;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background-color: #f9f9f9;
     }
+
     button {
-      margin-top: 25px;
-      background: #43a047;
-      color: white;
+      background-color: #2f4b7c;
+      color: #ffffff;
       border: none;
-      padding: 14px 25px;
-      border-radius: 10px;
-      font-size: 18px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 8px;
       cursor: pointer;
+      transition: background 0.3s ease;
       width: 100%;
     }
+
     button:hover {
-      background: #2e7d32;
+      background-color: #665191;
+    }
+
+    .result {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      color: #222;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container h2 {
+        font-size: 1.5rem;
+      }
+
+      button {
+        font-size: 0.95rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>🔍 تحقق من رقم الشاسيه</header>
+
+  <header>
+    <h1>تطبيق سيارتي</h1>
+  </header>
+
   <div class="container">
-    <p>أدخل رقم الشاسيه للتحقق مما إذا كانت السيارة مُبلغ عنها</p>
-    <input type="text" placeholder="مثال: ABC123456789">
-    <button type="submit">تحقق الآن</button>
+    <h2>🔍 التحقق من السيارة</h2>
+    <form>
+      <label for="identifier">رقم الشاسي أو رقم اللوحة</label>
+      <input type="text" id="identifier" name="identifier" placeholder="أدخل رقم الشاسي أو اللوحة" required>
+
+      <button type="submit">تحقق</button>
+    </form>
+
+    <div class="result">
+      <p>لم يتم العثور على نتيجة بعد.</p>
+    </div>
   </div>
+
 </body>
 </html>
