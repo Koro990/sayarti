@@ -2,14 +2,63 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تحقق من السيارة</title>
+  <title>تحقق من رقم الشاسيه</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(to top left, #f1f8e9, #dcedc8);
+      color: #1b5e20;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 25px;
+      background: #43a047;
+      color: white;
+      border: none;
+      padding: 14px 25px;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #2e7d32;
+    }
+  </style>
 </head>
 <body>
-  <h2>🔍 تحقق من رقم الشاسيه</h2>
-  <form>
-    <label>أدخل رقم الشاسيه:</label><br>
-    <input type="text"><br><br>
-    <button type="submit">تحقق</button>
-  </form>
+  <header>🔍 تحقق من رقم الشاسيه</header>
+  <div class="container">
+    <p>أدخل رقم الشاسيه للتحقق مما إذا كانت السيارة مُبلغ عنها</p>
+    <input type="text" placeholder="مثال: ABC123456789">
+    <button type="submit">تحقق الآن</button>
+  </div>
 </body>
 </html>
